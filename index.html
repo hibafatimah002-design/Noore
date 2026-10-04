@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8fb;--ink:#1c1a1f;--muted:#6b6670;--green:#0f3d3a;--gold:#b08a3e;--line:#e6e1e8;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;line-height:1.6}
+a{color:inherit}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 6vw;border-bottom:1px solid var(--line)}
+.logo{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.6rem;font-weight:600;color:var(--green);text-decoration:none}
+nav a{margin-left:22px;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--green)}
+.hero{background:var(--green);color:#f3ecdd;padding:12vh 6vw;text-align:center}
+.hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(2.2rem,6vw,4rem);line-height:1.1;margin:0 auto 14px;max-width:16ch}
+.hero p{max-width:46ch;margin:0 auto 26px;opacity:.85}
+.btn{display:inline-block;padding:12px 26px;border:1px solid var(--gold);background:var(--gold);color:#fff;text-decoration:none;font:500 .95rem Jost,sans-serif;cursor:pointer;border-radius:2px}
+.btn:hover{background:#9a7733}
+.btn.alt{background:transparent;color:var(--green);border-color:var(--green)}
+.btn.alt:hover{background:var(--green);color:#fff}
+section{padding:64px 6vw}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:2.2rem;margin:0 0 6px;color:var(--green)}
+.sub{color:var(--muted);margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:28px}
+.card{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.img{aspect-ratio:3/4;background:linear-gradient(160deg,#dfd5c3,#b9a88a);position:relative;overflow:hidden}
+.img img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;top:10px;left:10px;background:var(--green);color:#fff;font-size:.78rem;padding:3px 10px}
+.body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.body h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.4rem;font-weight:600;margin:0}
+.meta{color:var(--muted);font-size:.9rem;margin:0}
+.price{font-weight:500;font-size:1.1rem;color:var(--green);margin-top:auto;padding-top:8px}
+.price s{color:var(--muted);font-weight:400;font-size:.9rem;margin-left:6px}
+.card .btn{text-align:center;margin-top:8px}
+.how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:8px}
+.steps h4{margin:0 0 4px;font-size:1.05rem;color:var(--green)}
+.steps p{margin:0;color:var(--muted)}
+.contact{text-align:center}
+.contact .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0}
+footer{padding:24px 6vw;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:560px){nav{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+  EDIT THIS BLOCK ONLY. Everything on the website comes from here.
+  - Change text between the quote marks.
+  - phone: digits only with country code, no + or spaces (India = 91...)
+  - image: put the photo in an "images" folder next to this file
+    and write its name, e.g. "images/suit1.jpg"
+  - To add a suit: copy one { ... }, block and paste it below.
+  - To remove a suit: delete its { ... }, block.
+============================================================ -->
+<script>
+const SHOP = {
+  name: "Noore",
+  tagline: "Find your favourite",
+  intro: "Handpicked lawn, cotton and chiffon suits. Order on WhatsApp and pay when it arrives.",
+  phone: "8318992763",
+  phoneDisplay: "+91 8318992763",
+  address: "Lucknow, UP",
+  delivery: "Delivery across India in 5 to 7 days.",
+  suits: [
+    { name: "rose", fabric: "Premium lawn", price: 2499, oldPrice: 2999, sizes: "Unstitched, 3 piece", desc: "Embroidered front, printed dupatta, plain trousers.", image: "images/suit1.jpg", tag: "New" },
+    { name: "Ivory Chikankari", fabric: "Cotton", price: 1899, oldPrice: 0, sizes: "Unstitched, 3 piece", desc: "Soft cotton with fine thread work on the neckline.", image: "images/suit2.jpg", tag: "" },
+    { name: "Plum Chiffon Festive", fabric: "Chiffon", price: 3499, oldPrice: 0, sizes: "Stitched, M / L / XL", desc: "Light chiffon dupatta with gold border.", image: "images/suit3.jpg", tag: "Few left" },
+    { name: "rose", fabric: "Chiffon", price: 3499, oldPrice: 0, sizes: "Stitched, M / L / XL", desc: "Light chiffon dupatta with gold border.", image: "images/rose.jpg", tag: "Few left" }
+    
+]}
+</script>
+
+<header>
+  <a class="logo" href="#top" id="logo"></a>
+  <nav><a href="#suits">Suits</a><a href="#how">How to order</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="hero" id="top">
+  <h1 id="tagline"></h1>
+  <p id="intro"></p>
+  <a class="btn" href="#suits">See the suits</a>
+</div>
+
+<section id="suits">
+  <h2>Our suits</h2>
+  <p class="sub">Tap Order on WhatsApp under any suit to ask for it.</p>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="how" id="how">
+  <h2>How to order</h2>
+  <div class="steps">
+    <div><h4>Pick your suit</h4><p>Choose the one you like and tap Order on WhatsApp.</p></div>
+    <div><h4>Send your address</h4><p>We confirm availability, size and delivery details with you.</p></div>
+    <div><h4>Pay on delivery</h4><p>Cash on delivery only. Pay when the parcel reaches you. <span id="delivery"></span></p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact us</h2>
+  <p class="sub" id="addr"></p>
+  <div class="row">
+    <a class="btn" id="wa" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <a class="btn alt" id="call"></a>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const wa = (text) => "https://wa.me/" + SHOP.phone + "?text=" + encodeURIComponent(text);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const inr = n => "₹" + Number(n).toLocaleString("en-IN");
+
+document.title = SHOP.name;
+$("logo").textContent = SHOP.name;
+$("tagline").textContent = SHOP.tagline;
+$("intro").textContent = SHOP.intro;
+$("delivery").textContent = SHOP.delivery;
+$("addr").textContent = SHOP.address;
+$("wa").href = wa("Hello, I would like to ask about your suits.");
+$("call").href = "tel:+" + SHOP.phone;
+$("call").textContent = "Call " + SHOP.phoneDisplay;
+$("foot").textContent = "© " + new Date().getFullYear() + " " + SHOP.name + ". Cash on delivery only.";
+
+$("grid").innerHTML = SHOP.suits.map(s => `
+  <article class="card">
+    <div class="img">
+      <img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy" onerror="this.remove()">
+      ${s.tag ? `<span class="tag">${esc(s.tag)}</span>` : ""}
+    </div>
+    <div class="body">
+      <h3>${esc(s.name)}</h3>
+      <p class="meta">${esc(s.fabric)} · ${esc(s.sizes)}</p>
+      <p class="meta">${esc(s.desc)}</p>
+      <div class="price">${inr(s.price)}${s.oldPrice ? `<s>${inr(s.oldPrice)}</s>` : ""}</div>
+      <a class="btn" target="_blank" rel="noopener" href="${wa("Hello, I want to order: " + s.name + " (" + inr(s.price) + "). Cash on delivery.")}">Order on WhatsApp</a>
+    </div>
+  </article>`).join("");
+</script>
+</body>
+</html>
